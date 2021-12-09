@@ -13,6 +13,8 @@ namespace FinalProject.Pages.Games
     {
         private readonly FinalProject.Models.GameDbContext _context;
 
+        public string SearchTerm {get; set;}
+
         public IndexModel(FinalProject.Models.GameDbContext context)
         {
             _context = context;
