@@ -31,7 +31,7 @@ namespace FinalProject.Pages.Games
         public async Task OnGetAsync()
         {
             var query = _context.Games.Select(g => g);
-
+            
             switch (CurrentSort)
             {
                 case "genre_asc":

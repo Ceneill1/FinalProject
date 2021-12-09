@@ -10,6 +10,12 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" /></p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -31,7 +37,7 @@
                         genreSort = "genre_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-CurrentSort="@genreSort"></a>@Html.DisplayNameFor(model => model.Game[0].Genre)</a>
+                <a asp-page="./Index" asp-route-CurrentSort="@genreSort">@Html.DisplayNameFor(model => model.Game[0].Genre)</a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Game[0].Price)
