@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProject.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    [Migration("20211208190530_InitialCreate")]
+    [Migration("20211209000922_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,7 +34,7 @@ namespace FinalProject.Migrations
                     b.Property<string>("Rating")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(5);
+                        .HasMaxLength(10);
 
                     b.Property<string>("Title")
                         .IsRequired()

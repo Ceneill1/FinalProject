@@ -1,0 +1,91 @@
+@page
+@model FinalProject.Pages.Games.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @{
+                    var titleSort = "title_asc";
+                    if (Model.CurrentSort == "title_asc")
+                    {
+                        titleSort = "title_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@titleSort">@Html.DisplayNameFor(model => model.Game[0].Title)</a>
+            </th>
+            <th>
+                @{
+                    var genreSort = "genre_asc";
+                    if (Model.CurrentSort == "genre_asc")
+                    {
+                        genreSort = "genre_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@genreSort"></a>@Html.DisplayNameFor(model => model.Game[0].Genre)</a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Game[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Game[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Game) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.GameId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.GameId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.GameId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<hr />
+@{
+    var prevDisabled="";
+    if (Model.PageNum <=1)
+    {
+        prevDisabled = "disabled";
+    }
+
+}
+@{
+    var nexDisabled="";
+    if (Model.PageNum >=4)
+    {
+        nexDisabled = "disabled";
+    }
+
+}
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class ="page-item @prevDisabled"><a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a></li>
+        <li class ="page-item @nexDisabled"><a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a></li>
+    </ul>
+</nav>

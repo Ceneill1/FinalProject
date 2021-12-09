@@ -24,7 +24,7 @@ namespace FinalProject.Models
 
 
         [Required]
-        [StringLength(5)]
+        [StringLength(10)]
         public string Rating {get; set;}
 
     }

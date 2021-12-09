@@ -14417,8 +14417,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Games\\Edit.cshtml",
+      "TargetPath": "Pages\\Games\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Games\\Delete.cshtml",
+      "TargetPath": "Pages\\Games\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Games\\Details.cshtml",
+      "TargetPath": "Pages\\Games\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14429,6 +14444,11 @@
     {
       "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Shibo\\Desktop\\CIDM 3312\\FinalProject\\Pages\\Games\\Create.cshtml",
+      "TargetPath": "Pages\\Games\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -32,7 +32,7 @@ namespace FinalProject.Migrations
                     b.Property<string>("Rating")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(5);
+                        .HasMaxLength(10);
 
                     b.Property<string>("Title")
                         .IsRequired()

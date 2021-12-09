@@ -15,7 +15,7 @@ namespace FinalProject.Migrations
                     Title = table.Column<string>(maxLength: 60, nullable: false),
                     Genre = table.Column<string>(maxLength: 60, nullable: false),
                     Price = table.Column<decimal>(nullable: false),
-                    Rating = table.Column<string>(maxLength: 5, nullable: false)
+                    Rating = table.Column<string>(maxLength: 10, nullable: false)
                 },
                 constraints: table =>
                 {
