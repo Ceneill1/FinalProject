@@ -6,6 +6,7 @@ namespace FinalProject.Models
 {
     public class Game
     {
+    
         public int GameId {get; set;}
 
 
@@ -26,6 +27,7 @@ namespace FinalProject.Models
         [Required]
         [StringLength(10)]
         public string Rating {get; set;}
+
 
     }
 }

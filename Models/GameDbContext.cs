@@ -10,5 +10,6 @@ namespace FinalProject.Models
             
         }
             public DbSet<Game> Games{get; set;}
+            
     }
 }
